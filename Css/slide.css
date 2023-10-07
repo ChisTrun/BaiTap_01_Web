@@ -1,0 +1,56 @@
+.Slide {
+    min-width: 30%;
+    max-width: 30%;
+    height: auto;
+    position: relative;
+    padding: 0.3rem;
+}
+
+.NewsItem {
+    float: left;
+    width: 100%;
+    height: auto;
+    border: solid 1px wheat;
+    margin: 0.2rem 0.3;
+    position: relative;
+}
+
+
+
+
+.NewsIndex {
+    width: 100%;
+    padding: 0.2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    line-height: 3rem;
+    
+}
+
+.NewsContent {
+    width: 100%;
+    padding: 0.4rem;
+    width: 100%;
+    height: auto;
+    word-wrap: break-word;
+    color: blue;
+    
+}
+
+
+.newHideSolor {
+    background-color: rgb(246,219,182);
+    color: rgb(177, 141, 140);
+}
+
+.newsShowColor {
+    background-color: var(--orangeStrong);
+    color: var(--orangeLight);
+}
+
+
+
