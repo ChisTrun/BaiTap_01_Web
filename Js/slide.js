@@ -51,6 +51,38 @@ for (const button of showButtons) {
     button.addEventListener('click', showEvent);
 }
 
+let moveButtons = document.querySelectorAll('.moveNews');
 
+for (const button of moveButtons) {
+    // button.addEventListener("mousedown",()=> {onDragEvent1(button.parentNode.parentNode)})
+    button.addEventListener('mousedown', (e) => {
+        cloneItem = button.parentNode.parentNode.cloneNode(true);
+        flag = button.parentNode.parentNode;
+        var x = e.pageX;
+        var y = e.pageY;
+        cloneItem.style.zIndex = 100;
+        cloneItem.style.width = flag.offsetWidth + 'px';
+        cloneItem.style.height = flag.offsetHeight + 'px';
+        cloneItem.style.opacity = '50%';
+        cloneItem.style.cursor = 's-resize'
+        cloneItem.style.position = 'absolute'; // Đặt vị trí tuyệt đối
+        cloneItem.style.left = (x - (flag.offsetWidth - flag.querySelector('.moveNews').offsetWidth)) + 'px'; // Đặt vị trí theo chiều ngang
+        cloneItem.style.top = (y - flag.querySelector('.moveNews').offsetHeight) + 'px'; // Đặt vị trí theo chiều dọc
+        document.body.appendChild(cloneItem); // Thêm đối tượng vào trang  
+        cloneItem.addEventListener('mousedown', handelMouseDown);
+        cloneItem.addEventListener('mousemove', handelMouseMove);
+        cloneItem.addEventListener('mouseup', handelMouseUpNews);
+        cloneItem.addEventListener('mouseout', handelMouseMove);
+        var mouseDownEvent = new MouseEvent("mousedown", {
+            bubbles: true,
+            cancelable: true,
+            view: window,
+            clientX: e.clientX,
+            clientY: e.clientY
+        });
+        cloneItem.dispatchEvent(mouseDownEvent);
+    })
+
+}
 
 
