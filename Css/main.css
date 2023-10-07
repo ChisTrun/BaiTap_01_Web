@@ -1,0 +1,41 @@
+.Main {
+    min-width: 70%;
+    max-width: 70%;
+    height: auto;
+    padding: 1rem;
+    border-left: 2px dotted lightblue;
+    position: relative;
+}
+
+.Main .MainTitle {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.Main .CusInfo {
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.Main .CusInfo table {
+    margin-top: 0.5rem;
+    width: 80%;
+    float: right;
+}
+
+
+
+.CusInfo table .label {
+    text-align: right;
+    padding-right: 0.3rem;
+}
+
+.textBox input {
+    width: 100%;
+}
+
+.radioButton {
+    display: inline-block;
+}
+

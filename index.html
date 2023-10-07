@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,9 @@
     <link rel="stylesheet" href="./Css/nav.css">
     <link rel="stylesheet" href="./Css/slide.css">
     <link rel="stylesheet" href="./Font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./Css/main.css">
 </head>
+
 <body>
     <div class="Container">
         <div class="Header ">
@@ -32,16 +35,79 @@
 
         <hr size="2" color="lightblue">
 
-        <div class="Slide">
-
-
-        </div>
+        <div class="Slide"></div>
 
         <div class="Main">
-            
+            <div class="MainTitle mainTextColor ">
+                <h2>đăng ký đơn hàng</h2>
+            </div>
+
+            <div class="CusInfo">
+                <hr size="1" color="gray">
+                <table class="inputTable">
+                    <tr>
+                        <td>
+                            <div class="label lName">Họ và tên: </div>
+                        </td>
+                        <td>
+                            <div class="textBox inputName"><input type="text" id="name"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="label lAdress">Địa chỉ: </div>
+                        </td>
+                        <td>
+                            <div class="textBox inputAddress"><input type="text" id="address"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="label lPhone">Điện thoại: </div>
+                        </td>
+                        <td>
+                            <div class="textBox inputPhone"><input type="text" id="phone"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="label lSex">Giới tính: </div>
+                        </td>
+                        <td class="sexInput">
+                            <div class="radioButton male"><input type="radio" name="sex" value="Nam">Nam</div>
+                            <div class="radioButton female"><input type="radio" name="sex" value="Nữ">Nữ</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="label lDate">Ngày giao hàng: </div>
+                        </td>
+                        <td>
+                            <div class="textBox inputDate"><input type="date" id="date"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="label lEmail">Email </div>
+                        </td>
+                        <td>
+                            <div class="textBox inputEmail"><input type="text" id="email"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="products">
+                
+            </div>
+            <div class="button">
+                
+            </div>
+
+            <div class="customers">
+            </div>
         </div>
         <div class="Footer">
-           
+
         </div>
 
     </div>
@@ -49,4 +115,5 @@
     <script src="./Js/slide.js"></script>
     <script src="./Js/main.js"></script>
 </body>
+
 </html>
