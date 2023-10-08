@@ -1,0 +1,22 @@
+Họ tên: Võ Chí Trung
+Mssv: 21120159
+
+1) Xây dựng bố cục tổng quát gồm Header, Nav, Main, Side và Footer theo thông số kích thước và vị trí yêu cầu. Tổng thể trang web phải được canh giữa trình duyệt theo chiều ngang : 100%
+2) Định dạng phần Header bao gồm cả dữ liệu: 100%
+3) Định dạng phần Nav bao gồm cả dữ liệu: 100%
+4) Định dạng phần Footer bao gồm cả dữ liệu: 100%
+5) Định dạng phần Side bao gồm cả dữ liệu: 100%
+6) Cho phép đóng mở (thu gọn) của NEWS: 100%
+7) Cho phép thay đổi thứ tự các NEWS: 100%
+8) Định dạng phần nhập liệu: 100%
+9) Xử lý kiểm tra dữ liệu phần nhập liệu: 100%
+10) Định dạng phần Danh sách sản phẩm (bao gồm dữ liệu): 100%
+11) Xử lý chuyển sản phẩm bằng button: 100%
+12 Xử lý chuyển sản phẩm bằng mouse kéo thả: 100%
+13) Định dạng bảng danh sách: 100%
+14) Xử lý chức năng Đăng ký và Xóa hết: 100%
+15) Đáp ứng responsive với độ phân giải 768px: 100%
+
+*Trong bài làm có sử dụng các icon của trang themify icon: https://themify.me/themify-icons
+
+=> Tổng điểm: 15đ
