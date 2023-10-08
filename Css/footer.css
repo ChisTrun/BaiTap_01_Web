@@ -1,0 +1,56 @@
+.Footer {
+    width: 100%;
+    height: 1.5em;
+    text-align: center;
+    background-color: var(--orangeLight);
+}
+
+.footerContent {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.author{
+    width: auto;
+    height: 1.5em;
+    line-height: 1.5em;
+    margin-right: 1rem;
+    color: var(--orangeStrong);
+}
+
+.footerNav{
+    width: auto;
+}
+
+.footerNav ul {
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.footerNav ul li {
+    height: 1.5em;
+    line-height: 1.5em;
+    color: var(--orangeStrong);
+}
+
+.footerNav li a {
+    text-decoration: underline;
+    padding: 0.2rem 0;
+    color: var(--orangeStrong);
+}
+
+.footerNav li a:hover {
+    background-color: var(--orangeStrong);
+    color: white;
+}
+
+.separate::after {
+    content: "|";
+    padding: 0 0.25rem;
+}
