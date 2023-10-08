@@ -90,7 +90,6 @@ function productPress(e) {
     let isMouseDownEvent = true;
     startTimeMS = (new Date()).getTime();
     timerId = setTimeout(() => {
-        console.log("hello");
         if (isMouseDownEvent) {
             flag = this;
             this.classList.add('isChoosen');
@@ -189,5 +188,4 @@ function removeAll(e) {
     for (const row of rows) {
         table.deleteRow(row.rowIndex);
     }
-
 } 
