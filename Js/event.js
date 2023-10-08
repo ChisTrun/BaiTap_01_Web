@@ -69,3 +69,125 @@ function handelMouseUpNews(e) {
     }
 }
 
+
+
+// Hàm xử lý event của Product
+function productUp(e) {
+    let timeRemain = timerStep - ((new Date()).getTime() - startTimeMS);
+    if (timeRemain <= timerStep) {
+        isMouseDownEvent = false;
+        clearTimeout(timerId);
+        if (!this.classList.contains('isChoosen')) {
+            this.classList.add('isChoosen');
+        } else {
+            this.classList.remove('isChoosen');
+        }
+
+    }
+}
+
+function productPress(e) {
+    let isMouseDownEvent = true;
+    startTimeMS = (new Date()).getTime();
+    timerId = setTimeout(() => {
+        console.log("hello");
+        if (isMouseDownEvent) {
+            flag = this;
+            this.classList.add('isChoosen');
+            cloneItem = this.cloneNode(true);
+            var x = e.pageX;
+            var y = e.pageY;
+            cloneItem.style.zIndex = 100;
+            cloneItem.style.width = flag.offsetWidth + 'px';
+            cloneItem.style.height = flag.offsetHeight + 'px'
+            cloneItem.style.opacity = '50%';
+            cloneItem.style.cursor = 'pointer'
+            cloneItem.style.position = 'absolute';
+            cloneItem.style.left = (x - flag.offsetWidth / 2) + 'px';
+            cloneItem.style.top = (y - flag.offsetHeight / 2) + 'px';
+            document.body.appendChild(cloneItem);
+            cloneItem.addEventListener('mousedown', handelMouseDown);
+            cloneItem.addEventListener('mousemove', handelMouseMove);
+            cloneItem.addEventListener('mouseup', handelMouseUpProduct);
+            cloneItem.addEventListener('mouseout', handelMouseMove);
+            var mouseDownEvent = new MouseEvent("mousedown", {
+                bubbles: true,
+                cancelable: true,
+                view: window,
+                clientX: e.clientX,
+                clientY: e.clientY
+            });
+            cloneItem.dispatchEvent(mouseDownEvent);
+        }
+
+    }, timerStep);
+
+}
+
+
+function handelMouseUpProduct(e) {
+    this.isMouseDown = false;
+    this.style.zIndex = 3;
+    this.remove();
+    flag.classList.remove('isChoosen');
+    let des = document.elementFromPoint(e.clientX, e.clientY);
+    des = des.classList.contains('productChild') ? des.parentNode.parentNode : des.classList.contains('productItem') ? des.parentNode : des.classList.contains('productList') ? des : null;
+    if (des != null && (des.classList.value != flag.parentNode.classList.value)) des.append(flag);
+}
+
+// Hàm xử lý của các nút muỗi tên phần Product
+function moveRightEvent(e) {
+    let srcList = document.querySelector('.storeList');
+    let desList = document.querySelector('.choosenList');
+    let choosenItems = srcList.querySelectorAll('.isChoosen');
+    for (const item of choosenItems) {
+        desList.append(item);
+        item.classList.remove('isChoosen');
+    }
+}
+function moveRightAllEvent(e) {
+    let srcList = document.querySelector('.storeList');
+    let desList = document.querySelector('.choosenList');
+    let choosenItems = srcList.querySelectorAll('.productItem');
+    for (const item of choosenItems) {
+        desList.append(item);
+        item.classList.remove('isChoosen');
+    }
+}
+function moveLeftEvent(e) {
+    let desList = document.querySelector('.storeList');
+    let srcList = document.querySelector('.choosenList');
+    let choosenItems = srcList.querySelectorAll('.isChoosen');
+    for (const item of choosenItems) {
+        desList.append(item);
+        item.classList.remove('isChoosen');
+    }
+}
+function moveLeftAllEvent(e) {
+    let desList = document.querySelector('.storeList');
+    let srcList = document.querySelector('.choosenList');
+    let choosenItems = srcList.querySelectorAll('.productItem');
+    for (const item of choosenItems) {
+        desList.append(item);
+        item.classList.remove('isChoosen');
+    }
+}
+
+// Xử lý của bảng khách hàng
+function register(e) {
+    let table = document.querySelector('.inputTable');
+    removeError(table);
+    let hasError = handleError(table);
+    if (hasError) {
+        addCustomser();
+    };
+}
+
+function removeAll(e) {
+    let table = document.querySelector('.customerTable');
+    let rows = document.querySelectorAll('.customerLine');
+    for (const row of rows) {
+        table.deleteRow(row.rowIndex);
+    }
+
+} 
