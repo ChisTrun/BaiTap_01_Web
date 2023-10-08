@@ -39,3 +39,183 @@
     display: inline-block;
 }
 
+.Main .products {
+    padding: 0 1rem;
+    padding-top: 1rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5fr 1fr 5fr ;
+    grid-template-rows: 1fr ;
+    grid-template-areas: 
+        "left center right"
+    ;
+    height: auto;
+    position: relative;
+}
+
+
+.Main .products .leftSide {
+    grid-area: left;
+    height: 30rem;
+    position: relative;
+}
+
+.Main .products .center {
+    grid-area: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Main .products .rightSide {
+    grid-area: right;
+    height: 30rem;
+    position: relative;
+}
+
+.listTitle {
+    font-weight: bold;
+}
+.products .leftSide .listTitle {
+    text-align: right;
+}
+
+
+.productList {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    position: relative;
+}
+
+.leftSide .productList {
+    border: 1px solid gray;
+}
+
+.rightSide .productList {
+    border: 1px solid orange;
+    background-color: rgba(192, 222, 232, 0.669);
+}
+.Main .button {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1rem;
+}
+
+
+
+
+.Main .button > * {
+    margin: auto 0.3rem;
+    width: 15%;
+    background-color: white;
+    border: 2px solid rgb(242,194,105) ;
+    border-radius: 0.2rem;
+}
+
+.Main .button > *:hover {
+    color: white;
+    background-color: var(--orangeStrong);
+}
+
+.error {
+    color: var(--priceCol);
+}
+.hasError{
+    border: 1px solid var(--priceCol);
+}
+
+
+
+.productItem {
+    font-size: 1.1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.2rem;
+    padding: 0.2rem;
+    height: auto;
+    width: 95%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1px gray;
+    border-radius: 0.2rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.productItem .productIcon {
+    font-size: 2.5rem;
+}
+
+.productItem .productPrice {
+    color: var(--priceCol);
+}
+
+
+.center .arrowButton >*{
+    margin: 0.2rem auto;
+    padding: 0.2rem 1rem;
+    border: solid 1px var(--orangeStrong);
+    border-radius: 0.2rem;
+}   
+
+.center .arrowButton >*:hover {
+    color: white;
+    background-color: var(--orangeStrong);
+}
+
+
+.mainTextColor {
+    color: var(--mainTextColor);
+}
+
+.buttonColor {
+    color: var(--mainButtonTextCol);
+}
+
+.isChoosen {
+    background-color: var(--orangeStrong);
+    color: white;
+}
+
+.customers {
+    width: 100%;
+}
+.customers hr {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.customers .customerTable {
+    width: 100%;
+    border: 1px solid white;
+}
+
+.customers .customerTable th {
+    color: white;
+    background-color: var(--orangeStrong);
+}
+
+.customerTable tr {
+    background-color: var(--orangeLight);
+}
+
+.customerTable td {
+    padding: 0.2rem;
+}
+
+.customerTable tr:nth-child(even){
+    background-color: white;
+}
+
+.column1, .column5 {
+    text-align: left;
+  }
+  
+  .column2, .column3, .column4  {
+    text-align: center;
+  }
+  
