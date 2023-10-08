@@ -1,0 +1,75 @@
+@media only screen and (max-width: 769px) {
+    
+    .Header {
+        height: auto;
+        width: 100%;
+    }
+
+    .Nav {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .Nav ul >* {
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+        height: auto;
+    }
+
+    .Nav ul a {
+        text-align: left;
+        display: block;
+        width: 100%;
+        
+    }
+    
+
+    .Slide {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .Main {
+        min-width: 100%;
+        max-width: 100%;
+        
+    }
+
+
+    .Main .CusInfo table {
+        width: 100%;
+        float: left;
+    }
+    
+    
+    
+    .CusInfo table .label {
+        text-align: left;
+        padding-right: 0.3rem;
+    }
+    
+    .textBox input {
+        width: 100%;
+    }
+
+
+    .Footer {
+        width: 100%;
+        height: auto;
+    }
+    
+    .footerContent {
+        width: 100%;
+        flex-flow: row wrap;
+    }
+    
+    .footerContent > * {
+        flex: 1 100%;
+    }
+    
+    
+}
