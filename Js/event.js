@@ -90,7 +90,7 @@ function productPress(e) {
     let isMouseDownEvent = true;
     startTimeMS = (new Date()).getTime();
     timerId = setTimeout(() => {
-        if (isMouseDownEvent) {
+        if (isMouseDownEvent) { 
             flag = this;
             this.classList.add('isChoosen');
             cloneItem = this.cloneNode(true);
